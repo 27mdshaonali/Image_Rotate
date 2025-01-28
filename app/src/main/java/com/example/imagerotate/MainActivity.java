@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.animation.LinearInterpolator;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     ImageView rotatingImage;
     Button pauseButton, playButton;
     ObjectAnimator rotate;
+    TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,10 +34,12 @@ public class MainActivity extends AppCompatActivity {
         rotatingImage = findViewById(R.id.rotatingImage);
         pauseButton = findViewById(R.id.pauseButton);
         playButton = findViewById(R.id.playButton);
+        textView = findViewById(R.id.textView);
+
 
         // Creating rotation animation
         rotate = ObjectAnimator.ofFloat(rotatingImage, "rotation", 0f, 360f);
-        rotate.setDuration(2000); // Rotates once every 2 seconds
+        rotate.setDuration(3000); // Rotates once every 2 seconds
         rotate.setRepeatCount(ObjectAnimator.INFINITE); // Infinite loop
         rotate.setInterpolator(new LinearInterpolator()); // Smooth and constant speed
 

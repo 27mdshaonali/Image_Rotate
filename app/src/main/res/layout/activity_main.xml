@@ -7,6 +7,19 @@
     tools:context=".MainActivity"
     tools:ignore="HardcodedText">
 
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:text="Amar shonar bangla amu tomay valo bashi. ciro din tomar akash tomar batash amar prane, o ma amar prane!!" />
+
     <ImageView
         android:id="@+id/rotatingImage"
         android:layout_width="150dp"
